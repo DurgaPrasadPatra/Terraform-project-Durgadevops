@@ -39,7 +39,15 @@ The objective is to demonstrate production-style Terraform coding practices whil
      EC2 Instance         MySQL RDS Database
 
 ```
+## Architecture Decisions
 
+- Used a custom VPC to isolate infrastructure.
+- Deployed the EC2 instance in a public subnet for administrative and application access.
+- Placed the RDS instance in a private subnet to improve security.
+- Configured remote Terraform state in Amazon S3 for team collaboration.
+- Used variables and local values to make the code reusable and maintainable.
+- Enabled default tagging to improve governance and cost tracking.
+- Split the Terraform configuration into logical files to improve readability and simplify maintenance.
 ---
 
 # Folder Structure
