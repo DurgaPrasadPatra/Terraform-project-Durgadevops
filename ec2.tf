@@ -24,9 +24,13 @@ resource "aws_instance" "web-server-1" {
 
   }
 
+  iam_instance_profile = aws_iam_instance_profile.ec2_profile.name     #added IAM role
+  
+
   tags = {
 
     Name = "${var.project_name}-server"
+    
 
   }
 
